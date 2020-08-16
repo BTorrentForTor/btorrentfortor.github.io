@@ -78,7 +78,7 @@ app.controller('BTorrentCtrl', ['$scope', '$rootScope', '$http', '$log', '$locat
     duration: 5000,
     html: true
   })
-  if (!WebTorrent.WEBRTC_SUPPORT) {
+  if (WebTorrent.WEBRTC_SUPPORT) {
     $rootScope.disabled = true
     ngNotify.set('Please use latest Chrome, Firefox or Opera', {
       type: 'error',
